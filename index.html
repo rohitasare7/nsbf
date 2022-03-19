@@ -3,269 +3,511 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>3D Grid Interaction with Content Preview | Codrops</title>
-		<meta name="description" content="A grid layout with content preview and a magnetic effect." />
-		<meta name="keywords" content="gsap, 3d, grid, thumbnails, content, preview, front end, css, javascript" />
+		<title>Alternate Column Scroll | Codrops</title>
+		<meta name="description" content="A layout with an alternate scroll on image columns and a content preview." />
+		<meta name="keywords" content="layout, scroll, locomotive scroll, column, javascript, web design" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" href="https://use.typekit.net/gyf5muf.css">
+		<link rel="stylesheet" href="https://use.typekit.net/njz5ajv.css">
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
 	<body class="loading">
 		<main>
-			<div class="message">Please view this demo on a desktop to see the effect.</div>
 			<div class="frame">
-				<div class="frame__title-wrap">
-					<h1 class="frame__title">3D Grid Interaction with Content Preview</h1>
-				</div>
-				<div class="frame__links">
-					<a href="https://tympanus.net/Development/3DGridContentPreview/">Previous demo</a>
-					<a href="https://tympanus.net/codrops/?p=54253">Article</a>
-					<a href="https://github.com/codrops/3DGridContentPreview">GitHub</a>
-				</div>
+				<h1 class="frame__title">Alternate Column Scroll</h1>
+				<nav class="frame__links">
+					<a href="https://tympanus.net/codrops/2021/12/01/grid-zoom-layout/">Previous demo</a>
+					<a href="https://tympanus.net/codrops/?p=57959">Article</a>
+					<a href="https://github.com/codrops/ColumnScroll/">GitHub</a>
+				</nav>
+				<button class="unbutton button-menu" aria-label="Open the menu"><span></span></button>
 			</div>
+			<h2 class="heading heading--up">Jack Ruthless</h2>
+			<h2 class="heading heading--down">Jack Ruthless</h2>
+			<div class="columns" data-scroll-container>
+				<div class="column-wrap column-wrap--height">
+					<div class="column">
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="2">
+								<div class="column__item-img" style="background-image:url(img/1.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Cyber Blue</span>
+								<span>2011</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="5">
+								<div class="column__item-img" style="background-image:url(img/2.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Gnostic Will</span>
+								<span>2012</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="8">
+								<div class="column__item-img" style="background-image:url(img/3.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>French Kiss</span>
+								<span>2013</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="11">
+								<div class="column__item-img" style="background-image:url(img/4.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Half Life</span>
+								<span>2014</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="14">
+								<div class="column__item-img" style="background-image:url(img/5.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Love Boat</span>
+								<span>2015</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="17">
+								<div class="column__item-img" style="background-image:url(img/6.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Golden Ray</span>
+								<span>2016</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="20">
+								<div class="column__item-img" style="background-image:url(img/7.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Blame Game</span>
+								<span>2017</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="23">
+								<div class="column__item-img" style="background-image:url(img/8.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Lone Dust</span>
+								<span>2018</span>
+							</figcaption>
+						</figure>
+					</div><!-- /column -->
+				</div><!-- /column-wrap -->
+				<div class="column-wrap">
+					<div class="column" data-scroll-section>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="1">
+								<div class="column__item-img" style="background-image:url(img/9.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Lucky Wood</span>
+								<span>2019</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="4">
+								<div class="column__item-img" style="background-image:url(img/10.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Good Earth</span>
+								<span>2020</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="7">
+								<div class="column__item-img" style="background-image:url(img/11.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Empty Words</span>
+								<span>2021</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="10">
+								<div class="column__item-img" style="background-image:url(img/12.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Nonage Line</span>
+								<span>2009</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="13">
+								<div class="column__item-img" style="background-image:url(img/13.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Blue Hell</span>
+								<span>2010</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="16">
+								<div class="column__item-img" style="background-image:url(img/14.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Cold Blood</span>
+								<span>2011</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="19">
+								<div class="column__item-img" style="background-image:url(img/15.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Tulip Heat</span>
+								<span>2012</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="22">
+								<div class="column__item-img" style="background-image:url(img/16.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Red Wrath</span>
+								<span>2013</span>
+							</figcaption>
+						</figure>
+					</div><!-- /column -->
+				</div>
+				<div class="column-wrap column-wrap--height">
+					<div class="column">
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="3">
+								<div class="column__item-img" style="background-image:url(img/17.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Bold Human</span>
+								<span>2014</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="6">
+								<div class="column__item-img" style="background-image:url(img/18.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Loyal Royal</span>
+								<span>2015</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="9">
+								<div class="column__item-img" style="background-image:url(img/19.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Lone Cone</span>
+								<span>2016</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="12">
+								<div class="column__item-img" style="background-image:url(img/20.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Dutch Green</span>
+								<span>2017</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="15">
+								<div class="column__item-img" style="background-image:url(img/21.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Valley Hill</span>
+								<span>2018</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="18">
+								<div class="column__item-img" style="background-image:url(img/22.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Kale Hale</span>
+								<span>2019</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="21">
+								<div class="column__item-img" style="background-image:url(img/23.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Fake Cake</span>
+								<span>2020</span>
+							</figcaption>
+						</figure>
+						<figure class="column__item">
+							<div class="column__item-imgwrap" data-pos="24">
+								<div class="column__item-img" style="background-image:url(img/24.jpg)"></div>
+							</div>
+							<figcaption class="column__item-caption">
+								<span>Book Belly</span>
+								<span>2021</span>
+							</figcaption>
+						</figure>
+					</div><!-- /column -->
+				</div><!-- /column-wrap -->
+			</div><!-- columns -->
 			<div class="content">
-				<h2 class="content__title">
-					<span class="content__title-line content__title-line--1" data-splitting>July/</span>
-					<span class="content__title-line content__title-line--2" data-splitting>August</span>
-				</h2>
-				<div class="grid">
-					<a href="#preview-1" class="grid__item pos-1" data-title="Mohanneles"><div class="grid__item-img" style="background-image:url(img/thumbs/1.jpg);"></div></a>
-					<a href="#preview-2" class="grid__item pos-2" data-title="Procody X"><div class="grid__item-img" style="background-image:url(img/thumbs/2.jpg);"></div></a>
-					<a href="#preview-3" class="grid__item pos-3" data-title="Evenner"><div class="grid__item-img" style="background-image:url(img/thumbs/3.jpg);"></div></a>
-					<a href="#preview-4" class="grid__item pos-4" data-title="M-Dignate"><div class="grid__item-img" style="background-image:url(img/thumbs/4.jpg);"></div></a>
-					<a href="#preview-5" class="grid__item pos-5" data-title="Boxtony"><div class="grid__item-img" style="background-image:url(img/thumbs/5.jpg);"></div></a>
-					<a href="#preview-6" class="grid__item pos-6" data-title="Ruthfull"><div class="grid__item-img" style="background-image:url(img/thumbs/6.jpg);"></div></a>
-					<a href="#preview-7" class="grid__item pos-7" data-title="La Facuoup"><div class="grid__item-img" style="background-image:url(img/thumbs/7.jpg);"></div></a>
-					<a href="#preview-8" class="grid__item pos-8" data-title="Medivict"><div class="grid__item-img" style="background-image:url(img/thumbs/8.jpg);"></div></a>
-					<a href="#preview-9" class="grid__item pos-9" data-title="Steeplump"><div class="grid__item-img" style="background-image:url(img/thumbs/9.jpg);"></div></a>
-					<a href="#preview-10" class="grid__item pos-10" data-title="Resson"><div class="grid__item-img" style="background-image:url(img/thumbs/10.jpg);"></div></a>
-					<a href="#preview-11" class="grid__item pos-11" data-title="Atinkers"><div class="grid__item-img" style="background-image:url(img/thumbs/11.jpg);"></div></a>
-					<a href="#preview-12" class="grid__item pos-12" data-title="Twinhouse"><div class="grid__item-img" style="background-image:url(img/thumbs/12.jpg);"></div></a>
-					<a href="#preview-13" class="grid__item pos-13" data-title="Lonstrian"><div class="grid__item-img" style="background-image:url(img/thumbs/13.jpg);"></div></a>
-					<a href="#preview-14" class="grid__item pos-14" data-title="Satinge"><div class="grid__item-img" style="background-image:url(img/thumbs/14.jpg);"></div></a>
-					<a href="#preview-15" class="grid__item pos-15" data-title="Vikins"><div class="grid__item-img" style="background-image:url(img/thumbs/15.jpg);"></div></a>
-					<a href="#preview-16" class="grid__item pos-16" data-title="Choulder V"><div class="grid__item-img" style="background-image:url(img/thumbs/16.jpg);"></div></a>
-				</div>
-				<div class="preview">
-					<div class="preview__item" id="preview-1">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/1.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Mohanneles</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Acapulco, Mexico</span><span>15/05/2025</span></div>
-							<p class="preview__item-description">Had a barney with the inlaws a bit miffed pigeons in Trafalgar Square nigh on't goggle box chav hard cheese old boy, marvelous Moriarty pulled a right corker squiffy fork out, a tad stupendous chaps doing my head in ee bah gum.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-2">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/2.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Procody X</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Bangkok, Thailand</span><span>22/02/2025</span></div>
-							<p class="preview__item-description">Houlligan pants pork dripping Moriarty ponce knackered wind up treacle lad bugger, ridicule mince pies ridiculous knackered munta tosser sorted it nonsense. Completely.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-3">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/3.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Evenner</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Berlin, Germany</span><span>16/05/2025</span></div>
-							<p class="preview__item-description">See a man about a dog naff chav gallivanting around Big Ben, blummin' rambunctious brainbox. A cuppa nuthouse ask your mother if it's just not cricket marmite, ever so lovely pennyboy. They can sod off stew and dumps.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-4">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/4.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">M-Dignate</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Berlin, Germany</span><span>26/06/2025</span></div>
-							<p class="preview__item-description">Gravy cheese and chips cotton on in a pickle narky bargain Betty chips see a man about a dog hedgehog a right toff bow ties are cool bloody shambles chaps, Sherlock the lakes a right royal knees up.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-5">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/5.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Boxtony</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Lisbon, Portugal</span><span>09/12/2025</span></div>
-							<p class="preview__item-description">Naff off taking the mick blummin' curtain twitching what a load of guff, wind up pezzy little a total jessie. Any road, best be off gutted it's me peepers pigeons in Trafalgar Square..</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-6">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/6.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Ruthfull</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Berlin, Germany</span><span>21/08/2025</span></div>
-							<p class="preview__item-description">And her Majesty's pleasure on his bill sausage roll off with her head squirrel baffled Shakespeare, stiff upper lip damn 'ar kid a cracking and thus. Jolly hockey sticks chinwag penny-dreadful stupendous indeed.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-7">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/7.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">La Facuoup</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Madrid, Spain</span><span>18/010/2025</span></div>
-							<p class="preview__item-description">a fiver cotton on rambunctious. Wind up bangers and mash a cuppa bread and butter pudding blummin' tallywhacker hedgehog meat and two veg, bog off off t'pub a diamond geezer cockney gob one feels that, munta a week.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-8">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/8.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Medivict</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Berlin, Germany</span><span>03/09/2025</span></div>
-							<p class="preview__item-description">Roast beef penny-dreadful it's cracking flags double dutch come hither on a stag do absolute slappers, marmite a right royal knees up fancy a cuppa have a bash naff for sooth, goggledegook grab a jumper utter shambles.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-9">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/9.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Steeplump</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>London, United Kingdom</span><span>16/01/2025</span></div>
-							<p class="preview__item-description">In the jacksy daft cow 'tis could murder a pint cotton on, crumpets brown sauce a tad. Oo ecky thump what a mug lass jellied eels bottled it it's spitting, bog roll absolute it's spitting driving a mini nicked a cracking.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-10">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/10.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Resson</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Vienna, Austria</span><span>12/03/2025</span></div>
-							<p class="preview__item-description">The chippy tally-ho The Hounds of Baskerville pot noodle 'ar kid conked him one on the nose fancy a cuppa bowler hat doing my nut in black cab, trouble and strife sausage roll damn conked him one on the nose ponce.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-11">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/11.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Atinkers</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Berlin, Germany</span><span>22/08/2025</span></div>
-							<p class="preview__item-description">Doing my nut in chav scouser cheesed off chav scally, Sherlock brown sauce god save the queen shortbread, cobbles pigeons in Trafalgar Square pork dripping.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-12">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/12.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Twinhouse</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Berlin, Germany</span><span>29/07/2025</span></div>
-							<p class="preview__item-description">Collywobbles completely starkers 221B Baker Street terribly round our gaff Shakespeare a tad, driving a mini have a gander could be a bit of a git nose rag. Cornish pasty old girl up the duff ey up every.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-13">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/13.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Lonstrian</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Sydney, Australia</span><span>19/07/2025</span></div>
-							<p class="preview__item-description">Bit of a div I could reet fancy a knows bugger all about nowt easy peasy two weeks on't trot Shakespeare cockney blummin', corgi you mean it ain't me noggin' alright duck stew and dumps.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-14">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/14.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Satinge</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Paris, France</span><span>22/06/2025</span></div>
-							<p class="preview__item-description">Essex girls how's your father stop arsing around Sonic Screwdriver, off t'shop real ale you mean it ain't me noggin' stiff upper lip what a mug Time Lord, ridicule Time Lord in the jacksy Big Ben houlligan.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-15">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/15.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Vikins</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Belgrade, Serbia</span><span>04/11/2025</span></div>
-							<p class="preview__item-description">The chippy because there was nothing on the gogglebox mince pies crumpets 10 pence mix one off marvelous smeg head black cab it's nicked doofer what a doddle.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
-					</div>
-					<div class="preview__item" id="preview-16">
-						<button class="preview__item-back unbutton"><span>Back</span></button>
-						<div class="preview__item-imgwrap">
-							<div class="preview__item-img" style="background-image:url(img/full/16.jpg);"></div>
-						</div>
-						<h2 data-splitting class="preview__item-title">Choulder V</h2>
-						<div class="preview__item-content">
-							<div class="preview__item-meta"><span>Moscow, Russia</span><span>10/08/2025</span></div>
-							<p class="preview__item-description">It's the bees knees oopsy-daisies bottled it on his bill Essex girls in a pickle ever so, flabbergasted what a load of cobblers in the goolies Bad Wolf chuffed, and grab a jumper have a kip narky one off.</p>
-							<button class="preview__item-info unbutton">+ Info</button>
-							<button class="preview__item-button">Buy Tickets</button>
-						</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Lucky Wood</h2>
+					<div class="content__item-text">
+						<span>Faith, you're driving me away
+						You do it every day
+						You don't mean it
+						But it hurts like hell</span>
+						<span>2019</span>
 					</div>
 				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Cyber Blue</h2>
+					<div class="content__item-text">
+						<span>My brain says I'm receiving pain
+						A lack of oxygen
+						From my life support
+						My iron lung
+						</span>
+						<span>2011</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Bold Human</h2>
+					<div class="content__item-text">
+						<span>We're too young to fall asleep
+						Too cynical to speak
+						We are losing it
+						Can't you tell?</span>
+						<span>2014</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Good Earth</h2>
+					<div class="content__item-text">
+						<span>We scratch our eternal itch
+						A twentieth century bitch
+						And we are grateful for
+						Our iron lung</span>
+						<span>2020</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Gnostic Will</h2>
+					<div class="content__item-text">
+						<span>The head shrinkers
+						They want everything
+						My Uncle Bill
+						My Belisha beacon</span>
+						<span>2012</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Loyal Royal</h2>
+					<div class="content__item-text">
+						<span>The head shrinkers
+						They want everything
+						My Uncle Bill
+						My Belisha beacon</span>
+						<span>2015</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Empty Words</h2>
+					<div class="content__item-text">
+						<span>Suck, suck your teenage thumb
+						Toilet trained and dumb
+						When the power runs out
+						We'll just hum</span>
+						<span>2021</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">French Kiss</h2>
+					<div class="content__item-text">
+						<span>This, this is our new song
+						Just like the last one
+						A total waste of time
+						My iron lung</span>
+						<span>2013</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Lone Cone</h2>
+					<div class="content__item-text">
+						<span>And if you're frightened
+						You can be frightened
+						You can be, it's OK</span>
+						<span>2016</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Nonage Line</h2>
+					<div class="content__item-text">
+						<span>Lost in the mountain
+						Rust in my brain
+						The air is sacred here
+						In spite of your claim</span>
+						<span>2009</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Half Life</h2>
+					<div class="content__item-text">
+						<span>Up on the rooftops
+						Out of reach
+						Trickster is meaningless
+						Trickster is weak</span>
+						<span>2014</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Dutch Green</h2>
+					<div class="content__item-text">
+						<span>He's talking out the world
+						Talking out the world</span>
+						<span>2017</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Blue Hell</h2>
+					<div class="content__item-text">
+						<span>Hey, hey, hey
+						This is only halfway
+						Hey, hey, hey
+						This is only halfway</span>
+						<span>2010</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Love Boat</h2>
+					<div class="content__item-text">
+						<span>I wanted you so bad
+						That I couldn't say
+						All these things fall apart</span>
+						<span>2015</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Valley Hill</h2>
+					<div class="content__item-text">
+						<span>We wanted out so bad
+						We couldn't say
+						These things fall apart</span>
+						<span>2018</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Cold Blood</h2>
+					<div class="content__item-text">
+						<span>Truant kids
+						A can of brick dust worms
+						Who do not want to climb down from
+						Their chestnut tree</span>
+						<span>2011</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Golden Ray</h2>
+					<div class="content__item-text">
+						<span>Long white gloves
+						Police tread carefully
+						Escaped from the zoo
+						The perfect child facsimile is</span>
+						<span>2016</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Kale Hale</h2>
+					<div class="content__item-text">
+						<span>Please could you stop the noise? 
+							I'm trying to get some rest
+							From all the unborn chicken 
+							voices in my head</span>
+						<span>2019</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Tulip Heat</h2>
+					<div class="content__item-text">
+						<span>What's that?
+						I may be paranoid, but not an android</span>
+						<span>2012</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Blame Game</h2>
+					<div class="content__item-text">
+						<span>When I am king you will be first against the wall
+						With your opinion which is of no consequence at all</span>
+						<span>2017</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Fake Cake</h2>
+					<div class="content__item-text">
+						<span>Ambition makes you look pretty ugly
+						Kicking and squealing, Gucci little piggy</span>
+						<span>2017</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Red Wrath</h2>
+					<div class="content__item-text">
+						<span>You don't remember, you don't remember
+						Why don't you remember my name?</span>
+						<span>2013</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Lone Dust</h2>
+					<div class="content__item-text">
+						<span>Off with his head, man, off with his head, man
+						Why don't you remember my name? I guess he does</span>
+						<span>2018</span>
+					</div>
+				</div>
+				<div class="content__item">
+					<h2 class="content__item-title">Book Belly</h2>
+					<div class="content__item-text">
+						<span>Rain down, rain down
+						Come on, rain down on me
+						From a great height
+						From a great height, height</span>
+						<span>2021</span>
+					</div>
+				</div>
+				<nav class="content__nav">
+					<div class="content__nav-wrap">
+						<div class="content__nav-item" style="background-image:url(img/25.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/26.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/27.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/28.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/29.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/30.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/31.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/32.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/33.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/34.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/35.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/36.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/37.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/38.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/39.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/40.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/41.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/42.jpg)"></div>
+						<div class="content__nav-item" style="background-image:url(img/43.jpg)"></div>
+					</div>
+				</nav>
+				<button class="unbutton button-back"><svg viewBox="0 0 50 9" width="100%"><path d="M0 4.5l5-3M0 4.5l5 3M50 4.5h-77"></path></svg></button>
 			</div>
 		</main>
-		<div class="cursor">
-			<svg class="cursor__svg" width="80" height="80" viewBox="0 0 80 80">
-				<circle vector-effect="non-scaling-stroke" class="cursor__svg-circle" cx="40" cy="40" r="20"/>
-			</svg>
-			<span class="cursor__text"></span>
-		</div>
-		<script src="js/index.js"></script>
+		<script type="module" src="js/index.js"></script>
 	</body>
 </html>
